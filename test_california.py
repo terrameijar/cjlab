@@ -13,6 +13,14 @@ class CaliforniaTaxTest(unittest.TestCase):
         self.assertTrue(os.path.exists(
                          ca_prop_tax.local_zipname))
 
+    def test_that_dataset_unpack_dir_exists(self):
+        self.assertTrue(os.path.exists(ca_prop_tax.local_data_dir))
+
+    def test_that_dataset_unpacks_successfully(self):
+        self.assertNotEqual(os.listdir(ca_prop_tax.local_data_dir), [])
+
+    def test_that_unpacked_excel_workbook_can_be_read(self):
+        raise AssertionError("Work on this")
 
 if __name__ == '__main__':
     unittest.main()
