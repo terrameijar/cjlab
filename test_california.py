@@ -20,7 +20,8 @@ class CaliforniaTaxTest(unittest.TestCase):
         self.assertNotEqual(os.listdir(ca_prop_tax.local_data_dir), [])
 
     def test_that_unpacked_excel_workbook_can_be_read(self):
-        raise AssertionError("Work on this")
+        self.assertTrue(os.path.exists(
+                         ca_prop_tax.stats_db_doc))
 
 if __name__ == '__main__':
     unittest.main()
